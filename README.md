@@ -31,8 +31,8 @@ $search = new Search(['key' => '{YOURGOOGLEAPIKEY}']);
 // $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
 
 
-// If you setup the format in 'xml', the returned value will be an array. The library will decode the response
-// automatically
+// If you setup the format in 'xml', the returned value will be an array.
+// The library will decode the response automatically
 var_dump($search->text('restaurants in Inca Mallorca'));
 
 ```
