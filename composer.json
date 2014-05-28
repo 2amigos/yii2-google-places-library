@@ -1,0 +1,23 @@
+{
+    "name": "2amigos/yii2-google-places-library",
+    "description": "Google Places API Library for Yii2.",
+    "keywords": ["yii", "extension", "library", "google", "places"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Antonio Ramirez",
+            "email": "ramirez.cobos@gmail.com",
+            "homepage": "http://2amigos.us"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "guzzlehttp/guzzle": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dosamigos\\google\\places\\": ""
+        }
+    }
+}
