@@ -1,6 +1,8 @@
 Google Places API Library for Yii2
 ==================================
 
+[![Latest Stable Version](https://poser.pugx.org/2amigos/yii2-google-places-library/v/stable.svg)](https://packagist.org/packages/2amigos/yii2-google-places-library) [![Total Downloads](https://poser.pugx.org/2amigos/yii2-google-places-library/downloads.svg)](https://packagist.org/packages/2amigos/yii2-google-places-library) [![Latest Unstable Version](https://poser.pugx.org/2amigos/yii2-google-places-library/v/unstable.svg)](https://packagist.org/packages/2amigos/yii2-google-places-library) [![License](https://poser.pugx.org/2amigos/yii2-google-places-library/license.svg)](https://packagist.org/packages/2amigos/yii2-google-places-library)
+
 Extension library to interact with [Google Places API](https://developers.google.com/places/documentation/index)
 
 Installation
