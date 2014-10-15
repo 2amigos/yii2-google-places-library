@@ -30,7 +30,7 @@ class Place extends Client
 	 * @param array $params optional parameters
 	 * @return mixed|null
 	 */
-	public function details($reference, $language = 'en', $params = [])
+	public function details($placeId, $language = 'en', $params = [])
 	{
 		$params['reference'] = $reference;
 		$params['language'] = $language;
