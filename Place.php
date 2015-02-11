@@ -25,14 +25,14 @@ class Place extends Client
 	 * Returns the details of a place.
 	 * @see https://developers.google.com/places/documentation/details
 	 * @see https://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1
-	 * @param string $reference the place reference
+	 * @param string $placeid the place id
 	 * @param string $language the language to return the results. Defaults to 'en' (english).
 	 * @param array $params optional parameters
 	 * @return mixed|null
 	 */
-	public function details($reference, $language = 'en', $params = [])
+	public function details($placeid, $language = 'en', $params = [])
 	{
-		$params['reference'] = $reference;
+		$params['placeid'] = $placeid;
 		$params['language'] = $language;
 		$params['sensor'] = ArrayHelper::getValue($params, 'sensor', 'false');
 
