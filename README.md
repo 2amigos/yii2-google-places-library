@@ -5,6 +5,8 @@ Google Places API Library for Yii2
 
 Extension library to interact with [Google Places API](https://developers.google.com/places/documentation/index)
 
+Hey! We are on TutsPlus, check out its [tutorial about geolocation and google places](http://code.tutsplus.com/tutorials/building-your-startup-with-php-geolocation-and-google-places--cms-22729)
+
 Installation
 ------------
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
