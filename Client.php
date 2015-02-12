@@ -7,7 +7,7 @@
 namespace dosamigos\google\places;
 
 use GuzzleHttp\Client as HttpClient;
-use Guzzle\Http\Exception\RequestException;
+use GuzzleHttp\Exception\RequestException;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -35,7 +35,7 @@ class Client extends Component
 	 */
 	public $key;
 	/**
-	 * @var \Guzzle\Http\Client a client to make requests to the API
+	 * @var \GuzzleHttp\Client a client to make requests to the API
 	 */
 	private $_guzzle;
 
