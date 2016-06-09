@@ -11,6 +11,7 @@ use GuzzleHttp\Exception\RequestException;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 
 /**
  * Class Client is the base class of all objects in library. Handles common requests and Guzzle PHP client initialization.
@@ -79,7 +80,7 @@ class Client extends Component
 
 			return $this->format == 'xml'
 				? $response->xml()
-				: $response->json();
+				: Json::decode($response->getBody(), true);
 
 		} catch (RequestException $e) {
 			return null;
