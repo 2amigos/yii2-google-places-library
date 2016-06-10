@@ -78,9 +78,10 @@ class Client extends Component
 
 			$response = $this->getGuzzleClient()->get($this->getUrl($cmd), ArrayHelper::merge(['query' => $params], $options));
 
+			$body = $response->getBody();
 			return $this->format == 'xml'
-				? $response->xml()
-				: Json::decode($response->getBody(), true);
+				? simplexml_load_string($body)
+				: Json::decode($body, true);
 
 		} catch (RequestException $e) {
 			return null;
