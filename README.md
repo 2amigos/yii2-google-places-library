@@ -1,7 +1,9 @@
 Google Places API Library for Yii2
 ==================================
 
-Extension library to interact with [Google Places API](https://developers.google.com/places/documentation/index)
+Extension library to interact with [Google Places API](https://developers.google.com/places/documentation/index) by 
+wrapping the methods of our [2amigos/google-places-library](https://github.com/2amigos/google-places-library) into Yii2 
+components. 
 
 Installation
 ------------
@@ -23,29 +25,40 @@ to the require section of your application's `composer.json` file.
 Usage
 -----
 
-Using `Search` class:
+The preferred way is to setup the components into our Application's configuration array: 
+
+```php 
+'components' => [
+    'places' => [
+        'class' => '\dosamigos\google\places\Places',
+        'key' => '{your-google-api-key-with-places-activated}',
+        'format' => 'json' // or 'xml'
+    ],
+    'placesSearch' => [
+        'class' => '\dosamigos\google\places\Search',
+        'key' => '{your-google-api-key-with-places-activated}',
+        'format' => 'json' // or 'xml'
+    ]
+
+]
 
 ```
-$search = new Search(['key' => '{YOURGOOGLEAPIKEY}']);
 
-// $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
+That's it, you are ready to use them as Yii2 components. 
 
 
-// If you setup the format in 'xml', the returned value will be an array.
-// The library will decode the response automatically
-var_dump($search->text('restaurants in Inca Mallorca'));
+###Using `Search` Component
+
+```
+// If you setup the format in 'json', the returned value will be an array. If 'xml', it will return a SimpleXmlElement.
+var_dump(Yii::$app->search->text('restaurants in Inca Mallorca'));
 
 ```
 
-Using `Place` class:
+###Using `Places` component:
 
 ```
-$place = new Place(['key' => '{YOURGOOGLEAPIKEY}']);
-
-// $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
-
-
-$place->details('{REFERENCEIDOFPLACE}'));
+var_dump(Yii::$app->place->details('{REFERENCEIDOFPLACE}'));
 
 ```
 
@@ -53,10 +66,11 @@ Further Information
 -------------------
 
 For further information regarding the multiple parameters of Google Places please visit
-[its API reference](https://developers.google.com/places/documentation/index)
+[its API reference](https://developers.google.com/places/documentation/index) and our standalong library 
+[2amigos/google-places-library](https://github.com/2amigos/google-places-library)
 
-
-> [![2amigOS!](http://www.gravatar.com/avatar/55363394d72945ff7ed312556ec041e0.png)](http://www.2amigos.us)
-
-<i>Web development has never been so fun!</i>
-[www.2amigos.us](http://www.2amigos.us)
+<blockquote>
+    <a href="http://www.2amigos.us"><img src="http://www.gravatar.com/avatar/55363394d72945ff7ed312556ec041e0.png"></a><br>
+    <i>Custom Software Development | Web & Mobile Development Software</i><br> 
+    <a href="http://www.2amigos.us">www.2amigos.us</a>
+</blockquote>
