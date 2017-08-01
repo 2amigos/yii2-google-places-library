@@ -47,17 +47,17 @@ The preferred way is to setup the components into our Application's configuratio
 That's it, you are ready to use them as Yii2 components. 
 
 
-###Using Search Component
+##Using Search Component
 
-```
+```php
 // If you setup the format in 'json', the returned value will be an array. If 'xml', it will return a SimpleXmlElement.
 var_dump(Yii::$app->search->text('restaurants in Inca Mallorca'));
 
 ```
 
-###Using Places component:
+##Using Places component  
 
-```
+```php
 var_dump(Yii::$app->place->details('{REFERENCEIDOFPLACE}'));
 
 ```
