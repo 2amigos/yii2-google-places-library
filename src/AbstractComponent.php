@@ -1,7 +1,15 @@
 <?php
 
-namespace dosamigos\google\places;
+/*
+ * This file is part of the 2amigos/yii2-google-places-library project.
+ *
+ * (c) 2amigOS! <http://2amigos.us/>
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
 
+namespace dosamigos\google\places;
 
 use Da\Google\Places\Client\AbstractClient;
 use Da\Google\Places\Client\PlaceClient;
@@ -25,22 +33,10 @@ abstract class AbstractComponent extends Component
     protected $client;
 
     /**
-     * @throws InvalidConfigException
-     */
-    public function init()
-    {
-        if (empty($key) || empty($format)) {
-            throw new InvalidConfigException('"key" and/or "format" cannot be empty.');
-        }
-
-        parent::init();
-    }
-
-    /**
      * Wraps PlaceClient methods.
      *
      * @param string $name
-     * @param array $params
+     * @param array  $params
      *
      * @return mixed
      */
@@ -51,6 +47,18 @@ abstract class AbstractComponent extends Component
         }
 
         return parent::__call($name, $params);
+    }
+
+    /**
+     * @throws InvalidConfigException
+     */
+    public function init()
+    {
+        if (empty($key) || empty($format)) {
+            throw new InvalidConfigException('"key" and/or "format" cannot be empty.');
+        }
+
+        parent::init();
     }
 
     /**
