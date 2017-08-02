@@ -72,7 +72,7 @@ Further Information
 -------------------
 
 For further information regarding the multiple parameters of Google Places please visit
-[its API reference](https://developers.google.com/places/documentation/index) and our standalong library 
+[its API reference](https://developers.google.com/places/documentation/index) and our standalone library 
 [2amigos/google-places-library](https://github.com/2amigos/google-places-library)
 
 <blockquote>
