@@ -54,7 +54,7 @@ abstract class AbstractComponent extends Component
      */
     public function init()
     {
-        if (empty($key) || empty($format)) {
+        if (empty($this->key) || empty($this->format)) {
             throw new InvalidConfigException('"key" and/or "format" cannot be empty.');
         }
 
