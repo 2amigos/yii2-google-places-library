@@ -34,6 +34,8 @@ class Places extends AbstractComponent
             $this->client = new PlaceClient($this->key, $this->format);
         }
 
+        $this->client->forceJsonArrayResponse($this->forceJsonArrayResponse);
+
         return $this->client;
     }
 }

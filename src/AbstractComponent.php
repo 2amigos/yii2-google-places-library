@@ -28,6 +28,10 @@ abstract class AbstractComponent extends Component
      */
     public $key;
     /**
+     * @var return json results as arrays instead of objects
+     */
+    public $forceJsonArrayResponse = false;
+    /**
      * @var AbstractClient|PlaceClient|SearchClient
      */
     protected $client;

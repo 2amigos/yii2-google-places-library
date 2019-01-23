@@ -34,6 +34,8 @@ class Search extends AbstractComponent
             $this->client = new SearchClient($this->key, $this->format);
         }
 
+        $this->client->forceJsonArrayResponse($this->forceJsonArrayResponse);
+
         return $this->client;
     }
 }

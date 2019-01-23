@@ -36,15 +36,16 @@ The preferred way is to setup the components into our Application's configuratio
 ```php 
 'components' => [
     'places' => [
-        'class' => '\dosamigos\google\places\Places',
-        'key' => '{your-google-api-key-with-places-activated}',
-        'format' => 'json' // or 'xml'
-    ],
-    'placesSearch' => [
-        'class' => '\dosamigos\google\places\Search',
-        'key' => '{your-google-api-key-with-places-activated}',
-        'format' => 'json' // or 'xml'
-    ]
+         'class' => '\dosamigos\google\places\Places',
+         'key' => '{your-google-api-key-with-places-activated}',
+         'format' => 'json', // or 'xml'
+         'forceJsonArrayResponse' => true // for decoding responses to arrays instead of objects
+     ],
+     'placesSearch' => [
+         'class' => '\dosamigos\google\places\Search',
+         'key' => '{your-google-api-key-with-places-activated}',
+         'format' => 'json' // or 'xml'
+     ]
 
 ]
 
